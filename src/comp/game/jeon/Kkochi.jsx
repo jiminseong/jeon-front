@@ -4,7 +4,7 @@ import kkochi from '../../../assets/img/kkochi.png';
 const Kkochi = () => {
     return (
         <div>
-            <img src={kkochi} width={"5%"}></img>
+            <img src={kkochi} style={{ margin: '2px' }} width={"100px"}></img>
         </div>
     );
 };
