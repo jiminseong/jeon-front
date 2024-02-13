@@ -4,7 +4,7 @@ import perilla from '../../../assets/img/perillaleaf.png';
 const Perilla = () => {
     return (
         <div>
-            <img src={perilla} width={"5%"}></img>
+            <img src={perilla} sstyle={{ margin: '2px' }} width={"100px"}></img>
         </div>
     );
 };

@@ -1,20 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import background from '../../assets/img/gameback.jpg';
-import sokuri from '../../assets/img/sokuri.jpg';
 import plate from '../../assets/img/plate.jpg';
-
+import Sokuri_1f from './Sokuri_1f';
+import Sokuri_2f from './Sokuri_2f';
+import Sokuri_3f from './Sokuri_3f';
 
 
 const GamePage = () => {
+
     return (
-        <>
         <Back>
-            <Red/>
-            <Sokuri/>
-            <Blue/>
+            <Sokuri_1f/>
+            <Sokuri_2f/>
+            <Sokuri_3f/>         
         </Back>
-        </>
     );
 };
 
@@ -30,24 +30,3 @@ const Back = styled.div`
     background-size: cover;
 `;
 
-const Sokuri = styled.div`
-    width : 550px;
-    height : 550px;
-    border-radius : 50%;
-    background: url(${sokuri});
-`;
-
-
-const Red = styled.div`
-    width : 300px;
-    height : 300px;
-    border-radius : 50%;
-    background : url(${plate});
-`;
-
-const Blue = styled.div`
-    width : 300px;
-    height : 300px;
-    border-radius : 50%;
-    background : url(${plate});
-`;
