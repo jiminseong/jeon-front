@@ -1,18 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
-import background from '../../assets/img/GameBack.jpg'; 
-
+import Beef from './jeon/Beef';
+import Kkochi from './jeon/Kkochi';
+import Perilla from './jeon/Perilla';
+import Zucchini from './jeon/Zucchini';
 
 const GamePage = () => {
     return (
-        <Back src={background}>
+        <Back>
+            <Beef/>
+            <Kkochi/>
+            <Perilla/>
+            <Zucchini/>
         </Back>
     );
 };
 
 export default GamePage;
 
-const Back = styled.img`
+const Back = styled.div`
     width : 100%;
     height : 100%;
+    background-image: url('../../assets/img/gameback.jpg');
+    background-size: 100%;
 `;

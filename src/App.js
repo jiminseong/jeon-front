@@ -11,7 +11,7 @@ function App() {
     <div className="App">
        <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route path="/" element={<Home/>}></Route>
+        <Route path="/" element={<GamePage/>}></Route>
         <Route path="/register" element={<Register/>}></Route>
         <Route path="/game" element={<GamePage/>}></Route>
       </Routes>
