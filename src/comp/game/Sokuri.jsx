@@ -14,7 +14,7 @@ const StyledSokuri = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     width: 550px;
-    height: 550px;
+    height: 550px;~
     border-radius: 50%;
     background: url(${sokuri});
     background-color: yellow;
