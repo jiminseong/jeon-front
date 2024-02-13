@@ -4,7 +4,7 @@ import zucchini from '../../../assets/img/zucchini .png';
 const Zucchini = () => {
     return (
         <div>
-            <img src={zucchini}></img>
+            <img src={zucchini} width={"5%"}></img>
         </div>
     );
 };

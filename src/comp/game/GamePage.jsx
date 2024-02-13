@@ -1,26 +1,53 @@
 import React from 'react';
 import styled from 'styled-components';
-import Beef from './jeon/Beef';
-import Kkochi from './jeon/Kkochi';
-import Perilla from './jeon/Perilla';
-import Zucchini from './jeon/Zucchini';
+import background from '../../assets/img/gameback.jpg';
+import sokuri from '../../assets/img/sokuri.jpg';
+import plate from '../../assets/img/plate.jpg';
+
+
 
 const GamePage = () => {
     return (
+        <>
         <Back>
-            <Beef/>
-            <Kkochi/>
-            <Perilla/>
-            <Zucchini/>
+            <Red/>
+            <Sokuri/>
+            <Blue/>
         </Back>
+        </>
     );
 };
 
 export default GamePage;
 
 const Back = styled.div`
+    display : flex;
+    justify-content: space-evenly;
+    align-items: center;
     width : 100%;
     height : 100%;
-    background-image: url('../../assets/img/gameback.jpg');
-    background-size: 100%;
+    background: url(${background});
+    background-size: cover;
+`;
+
+const Sokuri = styled.div`
+    width : 550px;
+    height : 550px;
+    border-radius : 50%;
+    background: url(${sokuri});
+`;
+
+
+const Red = styled.div`
+    width : 300px;
+    height : 300px;
+    border-radius : 50%;
+    background : url(${plate});
+`;
+
+const Blue = styled.div`
+    width : 300px;
+    height : 300px;
+    border-radius : 50%;
+    background : url(${plate});
 `;
