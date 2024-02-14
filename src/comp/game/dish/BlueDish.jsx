@@ -1,16 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
-import plate from '../../../assets/img/plate.jpg';
+import blueplate from '../../../assets/img/blueplate.png';
+import { useDrop } from 'react-dnd';
+import { ItemTypes } from '../ItemTypes'
 
-const BlueDish = () => {
-    return <StyledPlate />;
+const BlueDish = ({ onDrop }) => {
+  const [{ isOver }, drop] = useDrop({
+    accept: ItemTypes.BEEF,
+    drop: (item, monitor) => {
+      onDrop(item);
+    },
+    collect: monitor => ({
+      isOver: !!monitor.isOver(),
+    }),
+  });
+
+    return <StyledPlate ref={drop} src={blueplate}/>;
 };
 
 export default BlueDish;
 
-const StyledPlate= styled.div`
-    width : 300px;
-    height : 300px;
-    border-radius : 50%;
-    background : url(${plate});
+const StyledPlate= styled.img`
+    height: 340px;
+    width: 340px;
+    z-index : 3
 `;

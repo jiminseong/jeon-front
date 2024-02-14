@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import sokuri from '../../assets/img/sokuri.jpg'
-import Beef from './jeon/Beef';
-import Kkochi from './jeon/Kkochi';
-import Perilla from './jeon/Perilla';
-import Zucchini from './jeon/Zucchini';
+import sokuri from '../../../assets/img/sokuri.png'
+import Beef from '../jeon/Beef';
+import Kkochi from '../jeon/Kkochi';
+import Perilla from '../jeon/Perilla';
+import Zucchini from '../jeon/Zucchini';
 
 const Sokuri_1f = () => {
-    // 요소 배열
+    //요소 배열
     const jeonArr = [
         <Beef />,<Beef />, 
         <Kkochi />, 
@@ -53,10 +53,11 @@ const Sokuri = styled.div`
     flex-direction : column;
     justify-content: center;
     align-items : center;
-    margin-top : 150px;
-    width : 550px;
-    height : 550px;
-    border-radius : 50%;
+    margin-top : 220px;
+    margin-left : 280px;  
+    width : 700px;
+    height : 600px;
+
     padding : 3em;
     background: url(${sokuri});
     background-size: cover;

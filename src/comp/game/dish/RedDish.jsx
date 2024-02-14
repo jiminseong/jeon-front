@@ -1,16 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import plate from '../../../assets/img/plate.jpg';
+import redplate from '../../../assets/img/redplate.png';
 
 const RedDish = () => {
-    return <StyledPlate />;
+    return <StyledPlate src={redplate}/>;
 };
 
 export default RedDish;
 
-const StyledPlate= styled.div`
-    width : 300px;
-    height : 300px;
-    border-radius : 50%;
-    background : url(${plate});
+const StyledPlate= styled.img`
+height: 340px;
+width: 340px;
+z-index : 3
 `;

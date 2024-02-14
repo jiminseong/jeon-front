@@ -3,22 +3,12 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
-    const handleStartClick = () => {
-        console.log("Game Start Button Click");
-    };
-    const handleHomeClick = () => {
-        console.log("goto Home Button Click");
-    };
-    const handleRegisterClick = () => {
-        console.log("goto Register Button Click");
-    }
+ 
     return (
         <>
         <Container>
             <TopSection>
-                <Link to='/'>
-                    <Button onClick={handleHomeClick}>🔙</Button>
-                </Link>
+            <HomeLink to='/'>🔙</HomeLink>
             </TopSection>
             <BottomSection>
                 <LeftSection style={{ justifyContent: 'center', alignItems: 'center' }}>
@@ -36,11 +26,9 @@ const Home = () => {
                     </FormStyle>
                 </RightSection>
             </BottomSection>
-            <Putter>
-                <Link to='/game'>
-                    <StartButton onClick={handleStartClick}>Game Start</StartButton>
-                </Link>
-            </Putter>
+            <Footer>
+                <StartLink to='/game'>화면을 터치하면 게임을 시작합니다</StartLink>
+            </Footer>
         </Container>
         </>
     );
@@ -87,22 +75,24 @@ const Input = styled.input`
     margin-bottom: 10px; 
 `;
 
-const Button = styled.button`
+const HomeLink = styled(Link)`
     padding: 10px 20px;
     font-size: 30px;
+    background-color: #f2f2f2;
     color: black;
     border: none;
+    text-decoration-line: none;
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
 `;
-
-const StartButton = styled(Button)`
-    color: black;
+const StartLink = styled(HomeLink)`
+    background-color:transparent;
     font-size: 50px;
+    height : 70px;
 `;
 
-const Putter = styled.div`
+const Footer = styled.div`
     width: 1366px;
     height: 200px;
     display: flex;

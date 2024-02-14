@@ -9,10 +9,6 @@ const Home = () => {
         console.log("Game Start Button Click");
     };
 
-    const handleLoginClick = () => {
-        console.log("Login Button Click");
-    }
-
   
     const [setRank, setServerRank] = useState(null);
 
@@ -29,20 +25,14 @@ const Home = () => {
         <>
         <BackImg>
         {renderRank()}
-            <TopContainer>
-                <Link to='/register'>
-                    <Button onClick={handleLoginClick}>회원가입</Button>
-                </Link>
-                
-                <Button onClick={() => handleRank(<ServerRank/>)}>
-                    <p>🏆 랭킹</p>
-                </Button>
-
-            </TopContainer>
+            <Header>
+                <RegisterLink to='/register'>회원가입</RegisterLink>
+                <RankLink onClick={() => handleRank(<ServerRank/>)}>
+                🏆 랭킹
+                </RankLink>
+            </Header>
             <Container>
-                <Link to='/login'>
-                    <StartButton onClick={handleStartClick}>Game Start</StartButton>
-                </Link>
+             <StartLink to='/login'>화면을 터치하면 게임을 시작합니다</StartLink>
             </Container>
         </BackImg>
         </>
@@ -55,7 +45,7 @@ const BackImg= styled.div`
 
 `;
 
-const TopContainer = styled.div`
+const Header = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 10px;
@@ -71,19 +61,24 @@ const Container = styled.div`
     height: 100px;
 `;
 
-const Button = styled.button`
+const  RegisterLink = styled(Link)`
     padding: 10px 20px;
     font-size: 30px;
-    background-color: #ffff00;
+    background-color: #f2f2f2;
     color: black;
     border: none;
+    text-decoration-line: none;
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
 `;
 
-const StartButton = styled(Button)`
+const StartLink = styled(RegisterLink)`
     background-color: #ffffff;
     color: black;
     font-size: 50px;
+`;
+
+const RankLink = styled(RegisterLink)`
+
 `;

@@ -5,6 +5,8 @@ import GamePage from './comp/game/GamePage';
 import Login from './comp/home/Login';
 import ServerRank from './comp/rank/ServerRank';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { TouchBackend } from 'react-dnd-touch-backend'; 
+import { DndProvider } from 'react-dnd';
 import './index.css';
 
 
@@ -12,6 +14,7 @@ function App() {
   return (
     <div className="App">
        <BrowserRouter basename={process.env.PUBLIC_URL}>
+       <DndProvider backend={TouchBackend}>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path="/register" element={<Register/>}></Route>
@@ -19,6 +22,7 @@ function App() {
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/serverrank" element={<ServerRank/>}></Route>
       </Routes>
+      </DndProvider>
     </BrowserRouter>
     </div>
   );

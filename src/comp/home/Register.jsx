@@ -3,18 +3,10 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const Register = () => {
-    const handleHomeClick = () => {
-        console.log("goto Home Button Click");
-    };
-    const handleRegisterClick = () => {
-        console.log("Game Start Button Click");
-    };
 
     return (
         <>
-        <Link to='/'>
-            <Button onClick={handleHomeClick}>🔙</Button>
-        </Link>
+        <HomeLink to='/'>🔙</HomeLink>
         <Container>
             <BackForm>
                 <FormStyle>
@@ -22,7 +14,7 @@ const Register = () => {
                     <Input type="text" placeholder="ID" />
                     <Input type="password" placeholder="PW" />
                 </FormStyle>
-                <Button onClick={handleRegisterClick}>회원가입</Button>
+                <RegisterLink to='/'>회원가입</RegisterLink>
             </BackForm>
         </Container>
         </>
@@ -50,15 +42,31 @@ const BackForm = styled.div`
     align-items: center;
     flex-direction: column;
 `;
-const Button = styled.button`
+const HomeLink = styled(Link)`
     padding: 10px 20px;
     font-size: 30px;
+    background-color: #f2f2f2;
     color: black;
     border: none;
+    text-decoration-line: none;
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
 `;
+
+const  RegisterLink = styled(Link)`
+    padding: 10px 20px;
+    font-size: 30px;
+    background-color: #f2f2f2;
+    color: black;
+    border: none;
+    text-decoration-line: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+`;
+
+
 const FormStyle = styled.form`
     display: flex;
     flex-direction: column;
